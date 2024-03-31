@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="dang-nhap.php" method="post">
+    <h1>Đăng nhập</h1>
+    <h3>
+      
+    </h3>
+    <label for="username">Tên đăng nhập:</label>
+    <input type="text" id="username" name="username" required>
+ 
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <button type="submit">Đăng nhập</button>
+
+       <a href="#">Forgogt Pass word?   </a>
+         <a href="#">Sign Up</a>
+ 
+   
+  </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đồng hồ ngang đếm thời gian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dong-ho-ngang">
+    <div class="thoi-gian">
+      <span class="gio">00</span>
+      <span class="phan-cach">:</span>
+      <span class="phut">00</span>
+      <span class="phan-cach">:</span>
+      <span class="giay">00</span>
+    </div>
+    <div class="nut-dieu-khien">
+      <button id="bat-dau">Bắt đầu</button>
+      <button id="tam-dung">Tạm dừng</button>
+      <button id="lap-lai">Lặp lại</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đồng hồ</title>
+    
+</head>
+<body>
+    <div id="clock">
+        <div id="time"></div>
+        <div id="progress"></div>
+    </div>
+    <script>
+        const time = document.getElementById("time");
+        const progress = document.getElementById("progress");
+        
+        function updateTime() {
+            const date = new Date();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            
+            time.textContent = `${hours}:${minutes}:${seconds}`;
+            
+            const progressWidth = (seconds / 60) * 100;
+            progress.style.width = `${progressWidth}%`;
+        }
+        
+        setInterval(updateTime, 1000);
+        
+        updateTime();
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh giá</title>
+</head>
+<body>
+    <h2>ĐÁNH GIÁ</h2>
+    
+    <div class="danh-gia">
+        <p class="ten-nguoi-dung">Phan Minh Tài</p>
+        <p class="noi-dung-gop-y">Dịch vụ nhanh chóng và tin cậy.</p>
+        <p class="ngay-gop-y">10/12/2023</p>
+    </div>
+    
+    <div class="danh-gia">
+        <p class="ten-nguoi-dung">Trầm Thanh Trúc</p>
+        <p class="noi-dung-gop-y">Họ thực sự làm việc tốt và yêu khách hàng của họ! Tôi cho họ sáu sao!”.</p>
+        <p class="ngay-gop-y">4/02/2024</p>
+    </div>
+  
+    <div class="danh-gia">
+        <p class="ten-nguoi-dung">Huỳnh Thị Hương</p>
+        <p class="noi-dung-gop-y"> Họ đã giúp đỡ rất nhiệt tình khi tôi muốn điều chỉnh đơn đặt hàng của mình.</p>
+        <p class="ngay-gop-y">20/03/2024</p>
+    </div>
+    
+    </body>
+</html>
